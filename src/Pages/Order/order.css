@@ -1,0 +1,166 @@
+.orders-page {
+  background-color: white;
+  padding: 40px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.orders-title {
+  font-size: 24px;
+  color: #111111;
+  margin: 0 0 6px 0;
+}
+
+.orders-subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 24px 0;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------- Order card ---------- */
+
+.order-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.order-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: #f2f3f5;
+}
+
+.order-info {
+  flex: 1;
+}
+
+.order-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.order-name {
+  font-size: 18px;
+  color: #111111;
+  margin: 0;
+}
+
+.order-id {
+  font-size: 13px;
+  color: #888888;
+  margin: 0 0 14px 0;
+}
+
+.order-details-row {
+  display: flex;
+  gap: 60px;
+}
+
+.order-details-col p {
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 6px 0;
+}
+
+/* ---------- Status badge ---------- */
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.status-delivered {
+  background-color: #e5f6ea;
+  color: #1a7f37;
+}
+
+.status-shipped {
+  background-color: #e6f0ff;
+  color: #1d4ed8;
+}
+
+.status-processing {
+  background-color: #fdf1e0;
+  color: #b45309;
+}
+
+/* ---------- Right side: total + button ---------- */
+
+.order-side {
+  text-align: right;
+  border-left: 1px solid #eeeeee;
+  padding-left: 20px;
+  flex-shrink: 0;
+}
+
+.order-total-label {
+  font-size: 13px;
+  color: #888888;
+  margin: 0 0 4px 0;
+}
+
+.order-total-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px 0;
+}
+
+.order-view-btn {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.order-view-btn:hover {
+  background-color: #f2f3f5;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .order-card {
+    flex-direction: column;
+  }
+
+  .order-details-row {
+    gap: 30px;
+  }
+
+  .order-side {
+    border-left: none;
+    border-top: 1px solid #eeeeee;
+    padding-left: 0;
+    padding-top: 14px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .order-view-btn {
+    width: 100%;
+  }
+}

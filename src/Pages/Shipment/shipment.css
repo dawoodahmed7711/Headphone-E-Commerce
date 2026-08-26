@@ -1,0 +1,199 @@
+.details-page {
+  background-color: #f2f3f5;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* ---------- Header ---------- */
+
+.details-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.details-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.back-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.details-title-row h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #111111;
+}
+
+.order-id-badge {
+  background-color: #111111;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.placed-on {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 14px 32px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: 32px;
+}
+
+.receipt-btn,
+.print-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.receipt-btn {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  color: #111111;
+}
+
+.receipt-btn:hover {
+  background-color: #f2f3f5;
+}
+
+.print-btn {
+  background-color: #111111;
+  border: none;
+  color: #ffffff;
+}
+
+.print-btn:hover {
+  background-color: #000000;
+}
+
+/* ---------- Card ---------- */
+
+.details-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  max-width: 960px;
+  padding: 24px 28px;
+}
+
+.details-card-title {
+  font-size: 18px;
+  color: #111111;
+  margin: 0 0 20px 0;
+}
+
+/* ---------- Each section: Contact / Shipping / Payment ---------- */
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #888888;
+  margin: 0 0 10px 0;
+}
+
+.detail-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.detail-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 6px 0;
+}
+
+.detail-line-icon {
+  color: #666666;
+  font-size: 14px;
+}
+
+.detail-section hr {
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin-top: 20px;
+}
+
+/* ---------- Payment method box ---------- */
+
+.payment-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.payment-box-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #f2f3f5;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333333;
+  flex-shrink: 0;
+}
+
+.payment-box-text {
+  font-size: 14px;
+  color: #333333;
+  margin: 0;
+}
+
+.payment-box-text strong {
+  color: #111111;
+  margin-right: 6px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .details-title-row h1 {
+    font-size: 20px;
+  }
+
+  .placed-on,
+  .header-actions {
+    margin-left: 0;
+  }
+
+  .details-card {
+    padding: 18px;
+  }
+
+  .payment-box {
+    align-items: flex-start;
+  }
+}

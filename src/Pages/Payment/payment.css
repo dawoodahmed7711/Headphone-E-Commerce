@@ -1,0 +1,220 @@
+*{
+    font-family: 'Poppins',sans-serif;
+}
+/* Page wrapper - just centers the card on a light gray background */
+.checkout-page {
+  background-color: #f2f3f5;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* The white card that holds everything */
+.checkout-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 630px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+
+.checkout-header {
+  background-color: #f7f8fa;
+  padding: 24px 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.checkout-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 28px;
+  color: #111111;
+}
+
+.checkout-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* ---------- Form body ---------- */
+
+.checkout-body {
+  padding: 24px 30px;
+}
+
+/* two fields side by side on desktop */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.required {
+  color: #e02424;
+}
+
+/* wraps an input/textarea together with its icon */
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  color: #888888;
+  font-size: 16px;
+}
+
+.input-icon-top {
+  top: 14px;
+}
+
+.input-with-icon input,
+.input-with-icon textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 12px 12px 38px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-with-icon textarea {
+  resize: vertical;
+}
+
+.input-with-icon input:focus,
+.input-with-icon textarea:focus {
+  border-color: #999999;
+}
+
+.input-with-icon input::placeholder,
+.input-with-icon textarea::placeholder {
+  color: #a3a3a3;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin: 24px 0;
+}
+
+/* ---------- Payment method ---------- */
+
+.section-title {
+  font-size: 18px;
+  margin: 0 0 14px 0;
+  color: #111111;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.payment-option-selected {
+  border: 2px solid #2563eb;
+  padding: 15px;
+}
+
+.payment-option-title {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.payment-option-text {
+  margin: 0;
+  font-size: 13px;
+  color: #666666;
+}
+
+.payment-option-icon {
+  font-size: 20px;
+  color: #cccccc;
+  flex-shrink: 0;
+}
+
+.payment-option-icon-selected {
+  color: #2563eb;
+}
+
+/* ---------- Footer ---------- */
+
+.checkout-footer {
+  background-color: #f7f8fa;
+  border-top: 1px solid #e5e5e5;
+  padding: 24px 30px;
+  text-align: center;
+}
+
+.place-order-btn {
+  width: 100%;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.place-order-btn:hover {
+  background-color: #000000;
+}
+
+.checkout-note {
+  margin: 12px 0 0 0;
+  font-size: 12.5px;
+  color: #777777;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px) {
+  .checkout-header,
+  .checkout-body,
+  .checkout-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.pd-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  color: #101223;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Breadcrumb ---------- */
+.pd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6a6f85;
+  margin-bottom: 24px;
+}
+
+.pd-breadcrumb-icon {
+  font-size: 12px;
+}
+
+.pd-breadcrumb-active {
+  color: #101223;
+}
+
+/* ---------- Grid ---------- */
+.pd-grid {
+  display: grid;
+  gap: 40px;
+}
+
+/* ---------- Gallery ---------- */
+.pd-main-image {
+  position: relative;
+  background: #e3e0fb;
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pd-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #101223;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ---------- Info ---------- */
+.pd-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pd-tagline {
+  font-size: 15px;
+  color: #6a6f85;
+  margin-top: 8px;
+}
+
+.pd-price {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.pd-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 24px 0;
+}
+
+.pd-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ---------- Description ---------- */
+.pd-description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pd-desc-paragraph {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #34364a;
+}
+
+.pd-qty-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.pd-qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d3dd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pd-qty-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border:  0.5px solid black;
+  border: 7px;
+}
+
+.pd-qty-value {
+  width: 36px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pd-stock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.pd-stock-icon {
+  font-size: 15px;
+}
+
+.pd-add-to-cart {
+  width: 100%;
+  background: #101223;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+.pd-secondary-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.pd-buy-now {
+  flex: 1;
+  border: 1px solid #d1d3dd;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #ffffff;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pd-wishlist-btn {
+  width: 56px;
+  border: 1px solid #d1d3dd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 900px) {
+  .pd-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
