@@ -11,12 +11,12 @@ import {
 import "./Payment.css";
 import { useContext, useState } from "react";
 import { SystemContext } from "../../Context.tsx";
-import { toast, ToastContainer } from "react-toastify";
+import { toast} from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 function Payment() {
   const navigate = useNavigate()
-  const {Current , setOrder ,  OrderData} = useContext(SystemContext)
+  const {Current ,  OrderData} = useContext(SystemContext) as any
   const [Fullname , setFullName] = useState<string>('')
    const [Email , setEmail] = useState<string>('')
     const [Phone , setPhone] = useState<string>('')

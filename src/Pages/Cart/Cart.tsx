@@ -50,13 +50,13 @@ const summary = {
 };
 type itemtype = any;
 
-function Cart() {
-  const {Cart ,  setCart ,  setCurrent} = useContext(SystemContext)
+function Cart() {  
+  const {Cart ,  setCart ,  setCurrent} = useContext(SystemContext) as any
   const navigate = useNavigate()
   const [total  , settotal] = useState<number>(0)
   
   const  removeItem = (id:number)=>{
-    setCart(prev => prev.filter(item => item.id !== id));
+    setCart((prev:any[])=> prev.filter(item => item.id !== id));
     toast.error('Item Removed From Cart')
   };
   

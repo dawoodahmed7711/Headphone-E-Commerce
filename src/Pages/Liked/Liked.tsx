@@ -7,46 +7,12 @@ import { Navigate, useNavigate } from 'react-router-dom';
 // ---------- Dummy favorites data ----------
 // Replace each "image" value with your own imported product image,
 // e.g. import Vase from './assets/vase.png' then image: Vase
-const favoriteItems = [
-  {
-    id: 1,
-    name: 'Ceramic Minimal Vase',
-    category: 'Home Decor',
-    variant: 'Color: White • Size: Medium',
-    price: 145.0,
-    image: '',
-  },
-  {
-    id: 2,
-    name: 'Matte Desk Luminaire',
-    category: 'Lighting',
-    variant: 'Color: Black • Material: Aluminum',
-    price: 210.0,
-    image: '',
-  },
-  {
-    id: 3,
-    name: 'Linen Woven Throw',
-    category: 'Textiles',
-    variant: 'Color: Beige • Size: 50x60"',
-    price: 85.0,
-    image: '',
-  },
-  {
-    id: 4,
-    name: 'Stoneware Cup Set',
-    category: 'Kitchenware',
-    variant: 'Color: Charcoal • Set of 3',
-    price: 60.0,
-    image: '',
-  },
-];
 
 function Favorites() {
     const navigate = useNavigate()
-    const {Favoutite ,  setFavourite ,  setCart} = useContext(SystemContext)
-    const  removeItem = (id:number)=>{
-       setFavourite(prev => prev.filter(item => item.id !== id));
+    const {Favoutite ,  setFavourite ,  setCart} = useContext(SystemContext) as any
+    const  removeItem = (id:any)=>{
+       setFavourite((prev:any[]) => prev.filter((item:any[]) => item.id !== id));
        toast.error('Removed from Favourites')
      };
     function favtocart(){

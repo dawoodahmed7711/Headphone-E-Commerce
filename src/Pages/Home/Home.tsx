@@ -94,7 +94,7 @@ const products = [
 
 function Home() {
 
-  const {ShowDetails ,  AddtoFavourite} = useContext(SystemContext)
+  const {ShowDetails ,  AddtoFavourite} = useContext(SystemContext) as any
   return (
     <div className="home">
       {/* ---------- Hero ---------- */}
