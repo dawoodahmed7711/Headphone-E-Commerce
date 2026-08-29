@@ -13,7 +13,7 @@ import Product8 from  '../../assets/product8.jpg'
 import { SystemContext } from "../../Context.tsx";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import Details from '../Details/Details.tsx'
+
 import { toast } from "react-toastify";
 
 

@@ -1,8 +1,9 @@
 
-import { createContext, useState ,  ReactNode, use } from 'react'
-import { toast } from 'react-toastify'
+import { createContext, useState  } from 'react'
+import type { ReactNode } from 'react'
 
-export const SystemContext = createContext()
+
+export const SystemContext = createContext<any>(null)
 
 
 interface ProductData {
@@ -14,7 +15,7 @@ interface ProductData {
     price: number,
     image: any,
 }
-function Context({children}:{children:React.ReactNode}) {
+function Context({children}:{children:ReactNode}) {
    const [Details ,  setDetails] = useState<ProductData|null>(null)
    const [Cart , setCart]  = useState<ProductData[]>([])
    const [Order ,  setOrder] = useState<ProductData[]>([])

@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { FiSearch, FiHeart, FiShoppingCart, FiMenu, FiX , FiHome, FiUser } from "react-icons/fi";
+import {  FiHeart, FiShoppingCart, FiMenu, FiX ,FiUser } from "react-icons/fi";
 import "./navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import home from "../../Pages/Home/Home.tsx";
-import Cart from "../../Pages/Cart/Cart.tsx";
-import Order from "../../Pages/Order/Order.tsx";
 const NAV_LINKS = [""];
 
 export default function Navbar() {
