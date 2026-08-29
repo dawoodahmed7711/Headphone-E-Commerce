@@ -8,7 +8,7 @@ import {
   FiCheckCircle,
   FiShoppingBag,
 } from "react-icons/fi";
-import "./Payment.css";
+import "./payment.css";
 import { useContext, useState } from "react";
 import { SystemContext } from "../../Context.tsx";
 import { toast} from "react-toastify";
