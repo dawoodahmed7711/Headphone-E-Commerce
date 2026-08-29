@@ -1,22 +1,20 @@
 import { FiChevronRight, FiTrash2 } from 'react-icons/fi';
 import './liked.css';
 import { SystemContext } from '../../Context.tsx';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { toast } from 'react-toastify';
-import { Navigate, useNavigate } from 'react-router-dom';
-// ---------- Dummy favorites data ----------
-// Replace each "image" value with your own imported product image,
-// e.g. import Vase from './assets/vase.png' then image: Vase
+import {  useNavigate } from 'react-router-dom';
+
 
 function Favorites() {
     const navigate = useNavigate()
     const {Favoutite ,  setFavourite ,  setCart} = useContext(SystemContext) as any
     const  removeItem = (id:any)=>{
-       setFavourite((prev:any[]) => prev.filter((item:any[]) => item.id !== id));
+       setFavourite((prev:any[]) => prev.filter((item:any) => item.id !== id));
        toast.error('Removed from Favourites')
      };
-    function favtocart(){
-        setCart(Favoutite)
+    function favtocart(item:any){
+        setCart((prev:any[])=>[...prev , item])
         toast.success('Added to Cart')
     }
   return (

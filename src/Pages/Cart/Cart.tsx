@@ -1,10 +1,9 @@
-import { FiChevronRight, FiMinus, FiPlus, FiTrash2, FiArrowLeft, FiLock, FiImage } from 'react-icons/fi';
+import { FiChevronRight, FiTrash2, FiArrowLeft, FiLock } from 'react-icons/fi';
 import './cart.css';
 import { SystemContext } from '../../Context.tsx';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import Details from '../Details/Details.tsx'
 import { toast } from 'react-toastify';
 // ---------- Dummy cart data ----------
 interface CartData {
@@ -48,7 +47,7 @@ const summary = {
   tax: 17.77,
   total: 241.77,
 };
-type itemtype = any;
+
 
 function Cart() {  
   const {Cart ,  setCart ,  setCurrent} = useContext(SystemContext) as any
