@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# 🎧 Headphones E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and responsive headphones e-commerce website built with **React, Vite, and TypeScript**.
 
-Currently, two official plugins are available:
+This project focuses on creating a real-world shopping experience with product browsing, product details, favorites, cart management, checkout, and order tracking.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 🛍️ Browse headphones and products
+- 🔎 Search and filter products
+- 📄 Product details page
+- 🛒 Add products to cart
+- ➕ Increase/decrease product quantity
+- ❌ Remove items from cart
+- ❤️ Add products to Favorites
+- ❌ Remove items from Favorites
+- 💳 Checkout / Payment section
+- 📝 Customer information form
+- 📦 Order placement
+- 🚚 Shipment / order details
+- 👤 Profile section
+- 📱 Fully responsive design
+- 🔔 Toast notifications for user actions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the Oxlint configuration
+- **React.js**
+- **TypeScript**
+- **Vite**
+- **React Router**
+- **Context API**
+- **CSS**
+- **React Toastify**
+- **React Icons**
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📂 Project Structure
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+```text
+src/
+├── Components/
+├── Pages/
+│   ├── Home/
+│   ├── Details/
+│   ├── Cart/
+│   ├── Liked/
+│   ├── Payment/
+│   ├── Order/
+│   └── Shipment/
+├── Context/
+├── Assets/
+└── App.tsx
