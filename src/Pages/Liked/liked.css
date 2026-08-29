@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:where(.fav-section) button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  line-height: normal;
+}
+
+.fav-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+  color: #101223;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Breadcrumb ---------- */
+.fav-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6a6f85;
+  margin-bottom: 16px;
+}
+
+.fav-breadcrumb-icon {
+  font-size: 12px;
+}
+
+.fav-breadcrumb-active {
+  color: #101223;
+  font-weight: 600;
+}
+
+/* ---------- Header ---------- */
+.fav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.fav-title {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.fav-item-count {
+  font-size: 14px;
+  color: #6a6f85;
+}
+
+/* ---------- List ---------- */
+.fav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+}
+
+.fav-card {
+  display: flex;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.fav-card-image {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  background: #f4f5fa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fav-card-image-tag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fav-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fav-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.fav-card-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fav-card-category {
+  font-size: 14px;
+  color: #34364a;
+  margin-top: 4px;
+}
+
+.fav-card-variant {
+  font-size: 13px;
+  color: #9095a8;
+  margin-top: 4px;
+}
+
+.fav-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fav-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.fav-add-btn {
+  background: #101223;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fav-delete-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a6f85;
+  font-size: 16px;
+}
+
+.fav-delete-btn:hover {
+  color: #dc2626;
+}

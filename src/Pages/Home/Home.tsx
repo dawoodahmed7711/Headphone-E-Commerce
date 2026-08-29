@@ -14,6 +14,7 @@ import { SystemContext } from "../../Context.tsx";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Details from '../Details/Details.tsx'
+import { toast } from "react-toastify";
 
 
 const products = [
@@ -93,7 +94,7 @@ const products = [
 
 function Home() {
 
-  const {ShowDetails} = useContext(SystemContext)
+  const {ShowDetails ,  AddtoFavourite} = useContext(SystemContext)
   return (
     <div className="home">
       {/* ---------- Hero ---------- */}
@@ -129,7 +130,7 @@ function Home() {
             <div className="product-card__media">
               <img src={product.image} alt={product.name} loading="lazy" />
               <span className="product-card__badge">{product.badge}</span>
-              <button className="product-card__brand" aria-hidden="true">
+              <button onClick={()=>(AddtoFavourite(product)  ,toast.success('Added to Favourite'))} className="product-card__brand" aria-hidden="true">
                 <FiHeart/>
               </button>
               <div className="product-card__dots">

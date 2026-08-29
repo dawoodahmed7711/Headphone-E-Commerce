@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Details from '../Details/Details.tsx'
+import { toast } from 'react-toastify';
 // ---------- Dummy cart data ----------
 interface CartData {
   id:number,
@@ -47,26 +48,32 @@ const summary = {
   tax: 17.77,
   total: 241.77,
 };
+type itemtype = any;
 
 function Cart() {
-  const {Cart ,  setCart} = useContext(SystemContext)
+  const {Cart ,  setCart ,  setCurrent} = useContext(SystemContext)
   const navigate = useNavigate()
   const [total  , settotal] = useState<number>(0)
-   
+  
   const  removeItem = (id:number)=>{
-    setCart(prev => prev.filter(item  => item.id !== id));
+    setCart(prev => prev.filter(item => item.id !== id));
+    toast.error('Item Removed From Cart')
   };
   
   useEffect(()=>{
      let tax:number = 20;
        let Shipping:number = 14;
-      let Subtotal = Cart.reduce((Total:number , item:number)=>{
-        return Total+Number(item.price);
+      let Subtotal = Cart.reduce((Total:number , item:any )=>{
+        return  Total+Number(item.price);
       },0)
-
+    
       const Result = Subtotal+tax+Shipping;
       settotal(Result)
   })
+  function CarttoOrder(){
+    setCurrent(Cart)
+    navigate('/payment')
+  }
    
    
   return (
@@ -148,10 +155,10 @@ function Cart() {
 
           <div className="cart-total-row">
             <span>Total</span>
-            <span className="cart-total-value">${total}</span>
+            <span className="cart-total-value">${total.toFixed(2)}</span>
           </div>
 
-          <button className="cart-pay-btn">Proceed to Pay</button>
+          <button className="cart-pay-btn" onClick={CarttoOrder}>Proceed to Pay</button>
 
           <div className="cart-secure-row">
             <FiLock className="cart-secure-icon" />

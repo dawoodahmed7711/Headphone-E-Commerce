@@ -20,6 +20,9 @@ export default function Navbar() {
   function toOrder(){
     navigate('/order')
   }
+  function tofavourite(){
+    navigate('/liked')
+  }
   return (
     <header className="navbar">
       <div className="navbar__inner">
@@ -41,12 +44,9 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__actions">
-          <div className="navbar__search">
-            <FiSearch size={16} className="navbar__search-icon" />
-            <input type="text" placeholder="Search" aria-label="Search" />
-          </div>
+         
 
-          <button className="navbar__icon-btn" aria-label="Wishlist">
+          <button onClick={tofavourite}  className="navbar__icon-btn" aria-label="Wishlist">
             <FiHeart size={19} />
           </button>
 

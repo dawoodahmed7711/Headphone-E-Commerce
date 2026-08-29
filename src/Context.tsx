@@ -1,5 +1,6 @@
 
 import { createContext, useState ,  ReactNode, use } from 'react'
+import { toast } from 'react-toastify'
 
 export const SystemContext = createContext()
 
@@ -17,8 +18,9 @@ function Context({children}:{children:React.ReactNode}) {
    const [Details ,  setDetails] = useState<ProductData|null>(null)
    const [Cart , setCart]  = useState<ProductData[]>([])
    const [Order ,  setOrder] = useState<ProductData[]>([])
-   const [Current ,  setCurrent] = useState(null)
+   const [Current ,  setCurrent] = useState<ProductData[]>([])
    const [shipdetail ,  setshipdetail] = useState(null)
+   const [Favoutite , setFavourite] = useState<ProductData[]>([])
 
 
    function ShowDetails(item:ProductData){
@@ -27,26 +29,30 @@ function Context({children}:{children:React.ReactNode}) {
     function AddCart(Cartitem:ProductData){
             setCart((prev)=>[...prev , Cartitem])
     }
-  function OrderData(order){
+  function OrderData(order:any):void{
     setOrder((prev)=>[...prev ,  order])
      console.log(Order)
   }
-  function CurrentData(curr){
-     setCurrent(curr)
+  function CurrentData(curr:any):void{
+     setCurrent((prev)=>[...prev , curr])
      console.log('Current:',curr)
      console.log('prams',curr)
      console.log('Order',Current)
    }
-   function ship(item) {
+   function ship(item:any):void {
     setshipdetail(item)
     console.log('Ship Details',item)
     console.log(shipdetail)
    }
-
-
+   function AddtoFavourite(item:any):void{
+     setFavourite((prev)=>[...prev , item])
+     console.log('Favoutite=>', item)
+     console.log(Favoutite)
+   }
+  
   return (
     <>
-    <SystemContext.Provider value={{ShowDetails  , Details , AddCart ,  Cart ,  setCart ,  setOrder  , OrderData , Order , CurrentData  , Current, ship , shipdetail} }>
+    <SystemContext.Provider value={{ShowDetails  , Details , AddCart ,  Cart ,  setCart ,  setOrder  , OrderData , Order , CurrentData  , Current, ship , shipdetail ,  setCurrent ,  AddtoFavourite , Favoutite ,  setFavourite} }>
       {children}
     </SystemContext.Provider>
     </>

@@ -6,6 +6,7 @@ import Product8 from '../../assets/product8.jpg'
 import { SystemContext } from '../../Context.tsx';
 // ---------- Data object (fits in wherever you plug your real data) ----------
 import Payment from '../Payment/Payment.tsx';
+import { toast, ToastContainer } from 'react-toastify';
 const product = {
   badge: 'New',
   name: 'Golden Yellow',
@@ -28,7 +29,7 @@ interface Data {
 }
 function ProductDetail() {
   const navigate = useNavigate()
-  const {Details ,  AddCart  , OrderData , CurrentData} = useContext(SystemContext)
+  const {Details ,  AddCart  , OrderData , CurrentData , setCurrent} = useContext(SystemContext)
   const [quantity, setQuantity] = useState(1);
   
   
@@ -48,10 +49,11 @@ function ProductDetail() {
    }
    function AddtoCart(){
      AddCart(Obj)
+     toast.success('Added to Cart ')
    
    }
    const done = ()=>{
-      CurrentData(Obj)
+      setCurrent([Obj])
    }
   
   return (

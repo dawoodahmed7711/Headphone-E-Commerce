@@ -11,8 +11,11 @@ import {
 import "./Payment.css";
 import { useContext, useState } from "react";
 import { SystemContext } from "../../Context.tsx";
+import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
+  const navigate = useNavigate()
   const {Current , setOrder ,  OrderData} = useContext(SystemContext)
   const [Fullname , setFullName] = useState<string>('')
    const [Email , setEmail] = useState<string>('')
@@ -36,8 +39,10 @@ function Payment() {
         const Both = {
           Shipment:ShippingData,
           Product:Current,
-        }
+        } 
         OrderData(Both)
+        toast.success('Order Completed')
+        navigate('/order')
       }
 
   return (
