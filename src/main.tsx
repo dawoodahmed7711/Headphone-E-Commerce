@@ -11,6 +11,8 @@ import Payment from './Pages/Payment/Payment.tsx'
 import Order from './Pages/Order/Order.tsx'
 import Shipment from './Pages/Shipment/Shipment.tsx'
 import Liked from './Pages/Liked/Liked.tsx'
+import About from './Pages/About/About.tsx'
+import Faqs from './Pages/Faqs/Faqs.tsx'
 import { ToastContainer } from 'react-toastify'
 
 const router = createBrowserRouter([{
@@ -38,6 +40,12 @@ const router = createBrowserRouter([{
   },{
     path:'liked',
     element:<Liked/>
+  },{
+    path:'about',
+    element:<About/>
+  },{
+    path:'faqs',
+    element:<Faqs/>
   }]
 }])
 createRoot(document.getElementById('root')!).render(

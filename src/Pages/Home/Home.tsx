@@ -9,8 +9,11 @@ import Product4 from  '../../assets/product4.jpg'
 import Product5 from  '../../assets/product5.jpg'
 import Product6 from  '../../assets/product6.jpg'
 import Product7 from  '../../assets/product7.jpg'
+import Feature from '../../assets/featureleft.png'
 import Product8 from  '../../assets/product8.jpg'
+import FeatureRight from '../../assets/featureright.png'
 import { SystemContext } from "../../Context.tsx";
+
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -112,6 +115,49 @@ function Home() {
           src={Headphone}
           alt="SonicWave over-ear headphones"
         />
+      </section>
+
+      {/* ---------- Feature highlights ---------- */}
+      <section className="feature-highlights">
+        <div className="feature-card feature-card--light">
+          <button className="feature-card__icon" aria-label="View details">
+            <ArrowUpRight size={16} strokeWidth={2.2} />
+          </button>
+
+          <div className="feature-card__content">
+            <span className="feature-card__pill">Weight only 0.38lb</span>
+            <h3 className="feature-card__heading">
+              Multiple
+              <br />
+              sound effect
+            </h3>
+          </div>
+
+          <img
+            className="feature-card__image"
+            src={Feature}
+            alt="Wireless over-ear headphones"
+          />
+        </div>
+
+        <div className="feature-card feature-card--dark">
+          <img
+            className="feature-card__bg"
+            src={FeatureRight}
+            alt="Person wearing headphones"
+          />
+
+          <div className="feature-card__overlay" />
+
+          <div className="feature-card__content feature-card__content--dark">
+            <span className="feature-card__pill feature-card__pill--dark">6EQ mode</span>
+            <h3 className="feature-card__heading feature-card__heading--white">
+              Hi-Fi stereo
+              <br />
+              sound
+            </h3>
+          </div>
+        </div>
       </section>
 
       {/* ---------- Products intro ---------- */}

@@ -2,7 +2,6 @@ import { useState } from "react";
 import {  FiHeart, FiShoppingCart, FiMenu, FiX ,FiUser } from "react-icons/fi";
 import "./navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
-const NAV_LINKS = [""];
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -20,6 +19,15 @@ export default function Navbar() {
   function tofavourite(){
     navigate('/liked')
   }
+  function tohome(){
+    navigate('/home')
+  }
+  function toabout(){
+    navigate('/about')
+  }
+  function tofaqs(){
+    navigate('/faqs')
+  }
   return (
     <header className="navbar">
       <div className="navbar__inner">
@@ -33,11 +41,35 @@ export default function Navbar() {
         </NavLink>
 
         <nav className="navbar__links" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
-            <NavLink key={link} to='/home' className="navbar__link">
-              {link}
-            </NavLink>
-          ))}
+          <NavLink
+          to=''
+            onClick={tohome}
+            className={({ isActive }) =>
+              isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+          onClick={toabout}
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            }
+          >
+            About
+          </NavLink>
+
+          <NavLink
+          onClick={tofaqs}
+            to="/faqs"
+            className={({ isActive }) =>
+              isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            }
+          >
+            FAQs
+          </NavLink>
         </nav>
 
         <div className="navbar__actions">
@@ -68,11 +100,29 @@ export default function Navbar() {
 
       {menuOpen && (
         <nav className="navbar__mobile" aria-label="Mobile">
-          {NAV_LINKS.map((link) => (
-            <a key={link} href="#" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
-              {link}
-            </a>
-          ))}
+          <NavLink
+            to="/home"
+            className="navbar__mobile-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className="navbar__mobile-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </NavLink>
+
+          <NavLink
+            to="/faqs"
+            className="navbar__mobile-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            FAQs
+          </NavLink>
         </nav>
       )}
     </header>

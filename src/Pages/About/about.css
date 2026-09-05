@@ -1,0 +1,123 @@
+:root {
+  --veluno-ink: #1a1710;
+  --veluno-cream: #faf8f4;
+  --veluno-line: #ece7de;
+  --veluno-muted: #8a8378;
+  --veluno-mauve: #b08d80;
+  --veluno-radius-lg: 28px;
+  --veluno-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.about {
+  font-family: var(--veluno-font);
+  background: var(--veluno-cream);
+  padding: 96px 56px;
+}
+
+.about__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* -- Text side -- */
+
+.about__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--veluno-mauve);
+  margin-bottom: 14px;
+}
+
+.about__heading {
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--veluno-ink);
+  margin: 0 0 20px;
+}
+
+.about__paragraph {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--veluno-muted);
+  max-width: 480px;
+  margin: 0 0 16px;
+}
+
+.about__stats {
+  display: flex;
+  gap: 36px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--veluno-line);
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about__stat-number {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--veluno-ink);
+}
+
+.about__stat-label {
+  font-size: 12.5px;
+  color: var(--veluno-muted);
+}
+
+/* -- Media side -- */
+
+.about__media {
+  position: relative;
+  border-radius: var(--veluno-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: #eef0ec;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 960px) {
+  .about {
+    padding: 72px 32px;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__media {
+    aspect-ratio: 16 / 10;
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 56px 20px;
+  }
+
+  .about__stats {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
