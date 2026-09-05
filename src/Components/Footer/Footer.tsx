@@ -1,5 +1,5 @@
 import { FiInstagram , FiTwitter , FiFacebook , FiYoutube } from "react-icons/fi";
-import "./Footer.css";
+import "./footer.css";
 
 const LINK_GROUPS = [
   {
